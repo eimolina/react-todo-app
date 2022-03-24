@@ -1,0 +1,32 @@
+.container{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: preloadAnimation;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #2b4f8f 8%, #4c77c3 18%, #284e90 33%);
+}
+
+.text{
+    color:#fff;
+}
+.container span{
+    width: 24px;
+    height: 24px;
+    background-color: rgb(220, 218, 255, 0.2);
+}
+
+@keyframes preloadAnimation{
+    0%{
+        background-position: -400px
+    }
+    100%{
+        background-position: 400px
+    }
+}

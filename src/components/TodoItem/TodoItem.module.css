@@ -1,0 +1,19 @@
+.task{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: background-color 0.4ms;
+}
+.task span{
+    padding: 0 5px;
+}
+.task:hover{
+    background-color: rgb(252, 224, 188);
+}
+.task-name-line{
+    text-decoration: line-through;
+}
