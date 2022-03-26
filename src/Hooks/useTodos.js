@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { useLocalStorage } from '../Hooks/useLocalStorage';
 
-const TodoContext = React.createContext();
 
-function TodoProvider(props) {
+export default function useTodos() {
 
     const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage("TODOS_V1", []);
     const [searchValue, setSearchValue] = React.useState('');
@@ -34,7 +33,6 @@ function TodoProvider(props) {
 
     const addTodo = (text) => {
         const newTodos = [...todos];
-        debugger;
         const maxId = newTodos.length > 0 ? Math.max.apply(Math, newTodos.map(x => x.id)) : 0;
         newTodos.push({
             id: (maxId + 1),
@@ -44,8 +42,7 @@ function TodoProvider(props) {
         saveTodos(newTodos);
     }
 
-    return (
-        <TodoContext.Provider value={{
+    return {
             loading,
             error,
             totalTodos,
@@ -58,10 +55,5 @@ function TodoProvider(props) {
             openModal,
             setOpenModal,
             addTodo
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    )
+        }
 }
-
-export { TodoContext, TodoProvider }

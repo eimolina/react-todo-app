@@ -2,9 +2,7 @@ import React, { Fragment } from 'react';
 import styles from './TodoSearch.module.css';
 import { TodoContext } from '../../Context';
 
-export default function TodoSearch() {
-
-  const { searchValue, setSearchValue } = React.useContext(TodoContext);
+export default function TodoSearch({ loading, searchValue, setSearchValue }) {
 
   const onSetSearchValueChange = (event) => {
     setSearchValue(event.target.value);
@@ -18,6 +16,7 @@ export default function TodoSearch() {
         placeholder="Search"
         value={searchValue}
         onChange={onSetSearchValueChange}
+        disabled={loading}
       />
     </Fragment>
   )

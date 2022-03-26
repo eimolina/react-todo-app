@@ -1,4 +1,7 @@
-.title{
+.counter{
     text-align: center;
     color:#fff
+}
+.disabled{
+    opacity: 25%;
 }

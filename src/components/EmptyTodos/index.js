@@ -4,7 +4,7 @@ import styles from './EmptyTodos.module.css'
 function EmptyTodos() {
   return (
     <Fragment>
-      <h2 className={styles.text}>¡No tienes tareas!</h2>
+      <h3 className={styles.text}>¡No tienes tareas!</h3>
       <small className={styles.text}>Añade una con el boton "Añadir"</small>
     </Fragment>
   )

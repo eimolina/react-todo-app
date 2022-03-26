@@ -1,5 +1,9 @@
 .task-section{
     width: 400px;
+    text-align: center;
+}
+.task-section h3{
+    color: #fff;
 }
 .task-container{
     list-style: none;
