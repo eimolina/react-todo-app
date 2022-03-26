@@ -7,7 +7,7 @@ import TodoSearch from './TodoSearch';
 import TodoList from './TodoList';
 import TodoItem from './TodoItem';
 import TodoButton from './TodoButton';
-import logo from '../../logo.jpg';
+import logo from '../logo.jpg';
 import TodoForm from './TodoForm';
 import { Modal } from './Modal';
 import TodoosLoading from './TodosLoading';
