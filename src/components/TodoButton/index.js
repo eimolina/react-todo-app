@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import styles from './TodoButton.module.css'
 
 export default function TodoButton({setOpenModal }) {
-
   return (
     <Fragment>
       <button

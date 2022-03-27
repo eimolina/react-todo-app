@@ -12,7 +12,7 @@ export default function TodoList(props) {
                 {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
                 {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchTodos(props.searchValue)}
                 <ul className={styles["task-container"]}>
-                    {props.searchedTodos.map(renderFunction)}
+                    {(!props.loading && !props.error) && props.searchedTodos.map(renderFunction)}
                     {/* {props.children} */}
                 </ul>
             </section>

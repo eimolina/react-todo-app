@@ -15,6 +15,7 @@ import TodosError from './TodosError';
 import EmptyTodos from './EmptyTodos';
 import TodoHeader from './TodoHeader';
 import useTodos from '../Hooks/useTodos';
+import {ChangeAlert, ChangeAlertWithStorageListener} from './ChangeAlert'
 
 function App(props) {
 
@@ -30,7 +31,8 @@ function App(props) {
     completedTodos,
     searchValue, 
     setSearchValue,
-    addTodo
+    addTodo,
+    synchronize
   } = useTodos();
 
   // return (
@@ -99,6 +101,7 @@ function App(props) {
         <TodoForm addTodo={addTodo} setOpenModal={setOpenModal}></TodoForm>
       </Modal>)}
       <TodoButton setOpenModal={setOpenModal} />
+      <ChangeAlertWithStorageListener synchronize={synchronize}/>
     </Fragment>
   );
 }

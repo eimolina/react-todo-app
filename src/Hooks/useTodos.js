@@ -4,7 +4,7 @@ import { useLocalStorage } from '../Hooks/useLocalStorage';
 
 export default function useTodos() {
 
-    const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage("TODOS_V1", []);
+    const { item: todos, saveItem: saveTodos, loading, error, synchronize } = useLocalStorage("TODOS_V1", []);
     const [searchValue, setSearchValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
 
@@ -54,6 +54,7 @@ export default function useTodos() {
             deleteTodo,
             openModal,
             setOpenModal,
-            addTodo
+            addTodo,
+            synchronize
         }
 }
